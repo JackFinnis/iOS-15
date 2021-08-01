@@ -9,18 +9,36 @@
 /* Begin PBXBuildFile section */
 		BE914D3A26B6DE6A00966B79 /* iOS_15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2C26B6DE6900966B79 /* iOS_15App.swift */; };
 		BE914D3B26B6DE6A00966B79 /* iOS_15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2C26B6DE6900966B79 /* iOS_15App.swift */; };
-		BE914D3C26B6DE6A00966B79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2D26B6DE6900966B79 /* ContentView.swift */; };
-		BE914D3D26B6DE6A00966B79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2D26B6DE6900966B79 /* ContentView.swift */; };
+		BE914D3C26B6DE6A00966B79 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2D26B6DE6900966B79 /* MessagesView.swift */; };
+		BE914D3D26B6DE6A00966B79 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D2D26B6DE6900966B79 /* MessagesView.swift */; };
 		BE914D3E26B6DE6A00966B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE914D2E26B6DE6A00966B79 /* Assets.xcassets */; };
 		BE914D3F26B6DE6A00966B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE914D2E26B6DE6A00966B79 /* Assets.xcassets */; };
+		BE914D4926B6E55600966B79 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D4826B6E55600966B79 /* ConversationView.swift */; };
+		BE914D4A26B6E55600966B79 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D4826B6E55600966B79 /* ConversationView.swift */; };
+		BE914D4C26B6F7FB00966B79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D4B26B6F7FB00966B79 /* User.swift */; };
+		BE914D4D26B6F7FB00966B79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D4B26B6F7FB00966B79 /* User.swift */; };
+		BE914D5226B6FC0800966B79 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5126B6FC0800966B79 /* Conversation.swift */; };
+		BE914D5326B6FC0800966B79 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5126B6FC0800966B79 /* Conversation.swift */; };
+		BE914D5526B7038400966B79 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5426B7038400966B79 /* Message.swift */; };
+		BE914D5626B7038400966B79 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5426B7038400966B79 /* Message.swift */; };
+		BE914D5826B7042800966B79 /* MessagingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5726B7042800966B79 /* MessagingManager.swift */; };
+		BE914D5926B7042800966B79 /* MessagingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5726B7042800966B79 /* MessagingManager.swift */; };
+		BE914D5B26B7056600966B79 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5A26B7056600966B79 /* ConversationRow.swift */; };
+		BE914D5C26B7056600966B79 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE914D5A26B7056600966B79 /* ConversationRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE914D2C26B6DE6900966B79 /* iOS_15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_15App.swift; sourceTree = "<group>"; };
-		BE914D2D26B6DE6900966B79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE914D2D26B6DE6900966B79 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		BE914D2E26B6DE6A00966B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE914D3326B6DE6A00966B79 /* iOS 15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE914D3926B6DE6A00966B79 /* iOS 15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE914D4826B6E55600966B79 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		BE914D4B26B6F7FB00966B79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE914D5126B6FC0800966B79 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		BE914D5426B7038400966B79 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BE914D5726B7042800966B79 /* MessagingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingManager.swift; sourceTree = "<group>"; };
+		BE914D5A26B7056600966B79 /* ConversationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				BE914D2C26B6DE6900966B79 /* iOS_15App.swift */,
-				BE914D2D26B6DE6900966B79 /* ContentView.swift */,
+				BE914D4E26B6F80F00966B79 /* Views */,
+				BE914D5026B6FBF200966B79 /* View Models */,
+				BE914D4F26B6F81C00966B79 /* Models */,
 				BE914D2E26B6DE6A00966B79 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -66,6 +86,34 @@
 				BE914D3926B6DE6A00966B79 /* iOS 15.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BE914D4E26B6F80F00966B79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE914D2D26B6DE6900966B79 /* MessagesView.swift */,
+				BE914D5A26B7056600966B79 /* ConversationRow.swift */,
+				BE914D4826B6E55600966B79 /* ConversationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE914D4F26B6F81C00966B79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE914D4B26B6F7FB00966B79 /* User.swift */,
+				BE914D5126B6FC0800966B79 /* Conversation.swift */,
+				BE914D5426B7038400966B79 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE914D5026B6FBF200966B79 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE914D5726B7042800966B79 /* MessagingManager.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE914D3C26B6DE6A00966B79 /* ContentView.swift in Sources */,
+				BE914D4C26B6F7FB00966B79 /* User.swift in Sources */,
+				BE914D4926B6E55600966B79 /* ConversationView.swift in Sources */,
+				BE914D3C26B6DE6A00966B79 /* MessagesView.swift in Sources */,
+				BE914D5B26B7056600966B79 /* ConversationRow.swift in Sources */,
+				BE914D5826B7042800966B79 /* MessagingManager.swift in Sources */,
+				BE914D5226B6FC0800966B79 /* Conversation.swift in Sources */,
+				BE914D5526B7038400966B79 /* Message.swift in Sources */,
 				BE914D3A26B6DE6A00966B79 /* iOS_15App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE914D3D26B6DE6A00966B79 /* ContentView.swift in Sources */,
+				BE914D4D26B6F7FB00966B79 /* User.swift in Sources */,
+				BE914D4A26B6E55600966B79 /* ConversationView.swift in Sources */,
+				BE914D3D26B6DE6A00966B79 /* MessagesView.swift in Sources */,
+				BE914D5C26B7056600966B79 /* ConversationRow.swift in Sources */,
+				BE914D5926B7042800966B79 /* MessagingManager.swift in Sources */,
+				BE914D5326B6FC0800966B79 /* Conversation.swift in Sources */,
+				BE914D5626B7038400966B79 /* Message.swift in Sources */,
 				BE914D3B26B6DE6A00966B79 /* iOS_15App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
