@@ -10,5 +10,5 @@ import Foundation
 struct User: Identifiable {
     var id = UUID()
     var name: String
-    var profilePicName: String = "person"
+    var profileEmoji: String = "🍩"
 }

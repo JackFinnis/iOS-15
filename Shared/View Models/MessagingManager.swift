@@ -22,12 +22,4 @@ class MessagingManager: ObservableObject {
             searchText.isEmpty ? true : conversation.user.name.contains(searchText)
         }
     }
-    
-    func deleteConversation(at offsets: IndexSet) {
-        conversations.remove(atOffsets: offsets)
-    }
-    
-    func moveConversation(from source: IndexSet, to destination: Int) {
-        conversations.move(fromOffsets: source, toOffset: destination)
-    }
 }
