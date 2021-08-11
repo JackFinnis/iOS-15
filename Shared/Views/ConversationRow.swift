@@ -15,92 +15,90 @@ struct ConversationRow: View {
     @State var showProfileSheet: Bool = false
     
     var body: some View {
-        if #available(iOS 15.0, *) {
-            NavigationLink(destination: ConversationView(conversation: conversation)) {
-                HStack {
-                    Group {
-                        if conversation.read {
-                            Text(conversation.user.profileEmoji)
-                        } else {
-                            Text(conversation.user.profileEmoji)
-                                .overlay(alignment: .topTrailing) {
-                                    Image(systemName: "circle.fill")
-                                        .font(.caption2)
-                                        .foregroundColor(.accentColor)
-                                }
-                        }
+        NavigationLink(destination: ConversationView(conversation: conversation)) {
+            HStack {
+                Group {
+                    if conversation.read {
+                        Text(conversation.user.profileEmoji)
+                    } else {
+                        Text(conversation.user.profileEmoji)
+                            .overlay(alignment: .topTrailing) {
+                                Image(systemName: "circle.fill")
+                                    .font(.caption2)
+                                    .foregroundColor(.accentColor)
+                            }
                     }
-                    .font(.title)
-                    .onTapGesture {
-                        showProfileSheet = true
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        Text(conversation.user.name)
-                            .font(.headline)
-                        Text(conversation.messages.last!.message)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
-                    Spacer()
-                    Text(conversation.messages.last!.getDateString())
+                }
+                .font(.title)
+                .onTapGesture {
+                    showProfileSheet = true
+                }
+                
+                VStack(alignment: .leading) {
+                    Text(conversation.user.name)
+                        .font(.headline)
+                    Text(conversation.messages.last!.message)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
+                Spacer()
+                Text(conversation.messages.last!.getDateString())
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
             }
-            .contextMenu {
-                Button {
-                    conversation.read.toggle()
-                    hapticFeedback()
-                } label: {
-                    conversation.readLabel
-                }
-                Button {
-                    conversation.notify.toggle()
-                    hapticFeedback()
-                } label: {
-                    conversation.notifyLabel
-                }
-                Button(role: .destructive) {
-                    showConfirmation = true
-                } label: {
-                    Label("Delete", systemImage: "trash")
+        }
+        .contextMenu {
+            Button {
+                conversation.read.toggle()
+                hapticFeedback()
+            } label: {
+                conversation.readLabel
+            }
+            Button {
+                conversation.notify.toggle()
+                hapticFeedback()
+            } label: {
+                conversation.notifyLabel
+            }
+            Button(role: .destructive) {
+                showConfirmation = true
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+        }
+        .swipeActions(edge: .leading) {
+            Button {
+                conversation.read.toggle()
+                hapticFeedback()
+            } label: {
+                conversation.readLabel
+            }
+            .tint(.accentColor)
+        }
+        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            Button(role: .destructive) {
+                showConfirmation = true
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+            Button {
+                conversation.notify.toggle()
+                hapticFeedback()
+            } label: {
+                conversation.notifyLabel
+            }
+            .tint(.indigo)
+        }
+        .confirmationDialog("Your conversation with \(conversation.user.name) will be deleted. This action cannot be undone.", isPresented: $showConfirmation, titleVisibility: .visible) {
+            Button("Delete", role: .destructive) {
+                messagingManager.conversations.removeAll { element in
+                    element.id == conversation.id
                 }
             }
-            .swipeActions(edge: .leading) {
-                Button {
-                    conversation.read.toggle()
-                    hapticFeedback()
-                } label: {
-                    conversation.readLabel
-                }
-                .tint(.accentColor)
-            }
-            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                Button(role: .destructive) {
-                    showConfirmation = true
-                } label: {
-                    Label("Delete", systemImage: "trash")
-                }
-                Button {
-                    conversation.notify.toggle()
-                    hapticFeedback()
-                } label: {
-                    conversation.notifyLabel
-                }
-                .tint(.indigo)
-            }
-            .confirmationDialog("Your conversation with \(conversation.user.name) will be deleted. This action cannot be undone.", isPresented: $showConfirmation, titleVisibility: .visible) {
-                Button("Delete", role: .destructive) {
-                    messagingManager.conversations.removeAll { element in
-                        element.id == conversation.id
-                    }
-                }
-            }
-            .sheet(isPresented: $showProfileSheet) {
-                Text(conversation.user.profileEmoji)
-                    .font(.title)
-            }
+        }
+        .sheet(isPresented: $showProfileSheet) {
+            Text(conversation.user.profileEmoji)
+                .font(.title)
         }
     }
     
